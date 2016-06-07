@@ -33,6 +33,7 @@ public class ClienteFrame extends javax.swing.JFrame {
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         saveAsMenuItem = new javax.swing.JMenuItem();
         exitMenuItem = new javax.swing.JMenuItem();
         helpMenu = new javax.swing.JMenu();
@@ -52,6 +53,14 @@ public class ClienteFrame extends javax.swing.JFrame {
             }
         });
         fileMenu.add(openMenuItem);
+
+        jMenuItem1.setText("Cadastrar Usuario");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        fileMenu.add(jMenuItem1);
 
         saveAsMenuItem.setMnemonic('a');
         saveAsMenuItem.setText("Consultar");
@@ -105,10 +114,11 @@ public class ClienteFrame extends javax.swing.JFrame {
     private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
-/**
- * Método para abrir o Login
- * @param evt 
- */
+    /**
+     * Método para abrir o Login
+     *
+     * @param evt
+     */
     private void openMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMenuItemActionPerformed
         LoginPanel l = new LoginPanel();
         JFrame login = new JFrame("Login");
@@ -120,8 +130,8 @@ public class ClienteFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_openMenuItemActionPerformed
 
     /**
-     * 
-     * @param evt 
+     *
+     * @param evt
      */
     private void saveAsMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveAsMenuItemActionPerformed
         consultarArquivo c = new consultarArquivo();
@@ -131,6 +141,15 @@ public class ClienteFrame extends javax.swing.JFrame {
         consultar.setSize(c.getPreferredSize().width + 20, c.getPreferredSize().height + 30);
         consultar.setVisible(true);
     }//GEN-LAST:event_saveAsMenuItemActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        cadastrarUsuario c = new cadastrarUsuario();
+        JFrame consultar = new JFrame("Consultar");
+        consultar.add(c);
+        consultar.setLocationRelativeTo(null);
+        consultar.setSize(c.getPreferredSize().width + 20, c.getPreferredSize().height + 30);
+        consultar.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,6 +184,7 @@ public class ClienteFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem saveAsMenuItem;
