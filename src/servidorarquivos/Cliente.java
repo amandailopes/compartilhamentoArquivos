@@ -106,8 +106,8 @@ public class Cliente {
 //            Logger.getLogger(Cliente.class.getName()).log(Level.SEVERE, null, ex);
 //        }
         Cliente c = new Cliente();
-        c.novoLogin("Kennedy", "kenreurison", "minhaSenha");
-        c.login("kenreurison", "minhaSenha");
+        c.novoLogin("Amanda", "amanda", "minhaSenha");
+        c.login("amanda", "minhaSenha");
         c.enviarArquivo("Um arquivo pra recordar", "uapr", new File("arquivoParaTransferencia"));
     }
 }

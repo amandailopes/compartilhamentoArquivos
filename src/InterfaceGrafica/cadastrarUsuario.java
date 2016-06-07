@@ -9,7 +9,7 @@ import servidorarquivos.Cliente;
 
 /**
  *
- * @author kenreurison
+ * @author Amanda
  */
 public class cadastrarUsuario extends javax.swing.JPanel {
 
